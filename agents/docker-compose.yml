@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  fastapi_app:
+    build: .
+    container_name: agent_app
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app  
+    environment:
+      - PYTHONUNBUFFERED=1
